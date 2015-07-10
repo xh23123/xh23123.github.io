@@ -581,7 +581,7 @@ a {
 }
 #header .header-nav .social {
   margin-right: 15px;
-  margin-top: -20px;
+  margin-top: -10px;
   text-align: center;
 }
 #header .header-nav .social a {
@@ -1841,6 +1841,7 @@ pre .javascript .function {
   position: absolute;
   z-index: 99;
   left: -13px;
+  line-height: 20px;
 }
 .switch-btn .tips-box .tips-inner li {
   padding: 4px 0;
