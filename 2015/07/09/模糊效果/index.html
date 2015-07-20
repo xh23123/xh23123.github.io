@@ -5,17 +5,32 @@
   
   <title>模糊效果时遇到的困难 | Summer&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="在做电影界面优化的时候有一个地方要求用模糊效果处理，效果是这样的使用下面这段代码可以实现模糊效果：blur(20)```1&amp;#26597;&amp;#20102;&amp;#19968;&amp;#19979;&amp;#36825;&amp;#21477;&amp;#35805;&amp;#30340;&amp;#23454;&amp;#29616;&amp;#21407;&amp;#29702;&amp;#65292;&amp;#26159;&amp;#25226;&amp;#27599;&amp;#20010;&amp;#2">
+  <meta name="description" content="在做电影界面优化的时候有一个地方要求用模糊效果处理，效果是这样的使用下面这段代码可以实现模糊效果：
+-webkit-filter: blur(20)
+查了一下这句话的实现原理，是把每个点向周围20个像素进行发散，所以在图片原来大小的周围也会出现一些淡淡的模糊效果，要想图片维持原来的大小，必须加上
+overflow： hidden
+做完这些后发现在电脑上达到了预期的效果。
+在手机上进行测试后发现有的">
 <meta property="og:type" content="article">
 <meta property="og:title" content="模糊效果时遇到的困难">
 <meta property="og:url" content="xh23123.github.io/2015/07/09/模糊效果/index.html">
 <meta property="og:site_name" content="Summer's blog">
-<meta property="og:description" content="在做电影界面优化的时候有一个地方要求用模糊效果处理，效果是这样的使用下面这段代码可以实现模糊效果：blur(20)```1&amp;#26597;&amp;#20102;&amp;#19968;&amp;#19979;&amp;#36825;&amp;#21477;&amp;#35805;&amp;#30340;&amp;#23454;&amp;#29616;&amp;#21407;&amp;#29702;&amp;#65292;&amp;#26159;&amp;#25226;&amp;#27599;&amp;#20010;&amp;#2">
-<meta property="og:image" content="xh23123.github.io/src/blur_1.png">
-<meta property="og:updated_time" content="2015-07-19T15:28:03.491Z">
+<meta property="og:description" content="在做电影界面优化的时候有一个地方要求用模糊效果处理，效果是这样的使用下面这段代码可以实现模糊效果：
+-webkit-filter: blur(20)
+查了一下这句话的实现原理，是把每个点向周围20个像素进行发散，所以在图片原来大小的周围也会出现一些淡淡的模糊效果，要想图片维持原来的大小，必须加上
+overflow： hidden
+做完这些后发现在电脑上达到了预期的效果。
+在手机上进行测试后发现有的">
+<meta property="og:image" content="xh23123.github.io/../src/blur_1.png">
+<meta property="og:updated_time" content="2015-07-20T02:30:32.346Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="模糊效果时遇到的困难">
-<meta name="twitter:description" content="在做电影界面优化的时候有一个地方要求用模糊效果处理，效果是这样的使用下面这段代码可以实现模糊效果：blur(20)```1&amp;#26597;&amp;#20102;&amp;#19968;&amp;#19979;&amp;#36825;&amp;#21477;&amp;#35805;&amp;#30340;&amp;#23454;&amp;#29616;&amp;#21407;&amp;#29702;&amp;#65292;&amp;#26159;&amp;#25226;&amp;#27599;&amp;#20010;&amp;#2">
+<meta name="twitter:description" content="在做电影界面优化的时候有一个地方要求用模糊效果处理，效果是这样的使用下面这段代码可以实现模糊效果：
+-webkit-filter: blur(20)
+查了一下这句话的实现原理，是把每个点向周围20个像素进行发散，所以在图片原来大小的周围也会出现一些淡淡的模糊效果，要想图片维持原来的大小，必须加上
+overflow： hidden
+做完这些后发现在电脑上达到了预期的效果。
+在手机上进行测试后发现有的">
   
     <link rel="alternative" href="/atom.xml" title="Summer&#39;s blog" type="application/atom+xml">
   
@@ -243,9 +258,14 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>在做电影界面优化的时候有一个地方要求用模糊效果处理，效果是这样的<br><img src="src/blur_1.png"><br>使用下面这段代码可以实现模糊效果：<br><figure class="highlight"><figcaption><span>blur(20)```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#26597;&#20102;&#19968;&#19979;&#36825;&#21477;&#35805;&#30340;&#23454;&#29616;&#21407;&#29702;&#65292;&#26159;&#25226;&#27599;&#20010;&#28857;&#21521;&#21608;&#22260;20&#20010;&#20687;&#32032;&#36827;&#34892;&#21457;&#25955;&#65292;&#25152;&#20197;&#22312;&#22270;&#29255;&#21407;&#26469;&#22823;&#23567;&#30340;&#21608;&#22260;&#20063;&#20250;&#20986;&#29616;&#19968;&#20123;&#28129;&#28129;&#30340;&#27169;&#31946;&#25928;&#26524;&#65292;&#35201;&#24819;&#22270;&#29255;&#32500;&#25345;&#21407;&#26469;&#30340;&#22823;&#23567;&#65292;&#24517;&#39035;&#21152;&#19978;&#10;```overflow&#65306; hidden</span><br></pre></td></tr></table></figure></p>
+        <p>在做电影界面优化的时候有一个地方要求用模糊效果处理，效果是这样的<br><img src="../src/blur_1.png"><br>使用下面这段代码可以实现模糊效果：</p>
+<p>-webkit-filter: blur(20)</p>
+<p>查了一下这句话的实现原理，是把每个点向周围20个像素进行发散，所以在图片原来大小的周围也会出现一些淡淡的模糊效果，要想图片维持原来的大小，必须加上</p>
+<p>overflow： hidden</p>
 <p>做完这些后发现在电脑上达到了预期的效果。</p>
-<p>在手机上进行测试后发现有的手机上并没有出现预期的模糊效果，原来是有的手机并不支持这个效果，通过：<br><code>if(&#39;-webkit-filter&#39; in document.element.style)</code><br>来检查是否支持滤镜属性<br>与美工商量后，决定对于不支持这个属性的手机做出如下处理：<br>将图片放大去中间的一部分，然后加上一片黑色的透明度50%的层<br>对于支持模糊效果的手机，考虑到部分图片是白色的，由于字也是白色的，所以在图片上也会加上不透明度为80%的黑色层</p>
+<p>在手机上进行测试后发现有的手机上并没有出现预期的模糊效果，原来是有的手机并不支持这个效果，通过：</p>
+<p><code>if(&#39;-webkit-filter&#39; in document.element.style)</code></p>
+<p>来检查是否支持滤镜属性<br>与美工商量后，决定对于不支持这个属性的手机做出如下处理：<br>将图片放大去中间的一部分，然后加上一片黑色的透明度50%的层<br>对于支持模糊效果的手机，考虑到部分图片是白色的，由于字也是白色的，所以在图片上也会加上不透明度为80%的黑色层</p>
 <p>然后在手机上再进行测试，发现在三星的手机上模糊效果非常的卡，非常影响用户的体验，没办法还是改成了都不支持的效果，如果要想使用这个效果，并且获得比较好的用户体验，应该在数据库中存一张模糊的图品，然后前端只需要获取该图片当背静就可以了，减少了渲染的时间。</p>
 
       

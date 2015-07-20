@@ -13,7 +13,7 @@ Solution:TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) { 
 <meta property="og:site_name" content="Summer's blog">
 <meta property="og:description" content="Question:给出二叉树与两个节点，找到该二叉树中两个节点最早的公共祖先
 Solution:TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {    if (!root) return NULL;    if (root == p || root == q) return root;    TreeNod">
-<meta property="og:updated_time" content="2015-07-15T04:34:50.539Z">
+<meta property="og:updated_time" content="2015-07-20T02:28:47.616Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="二叉树最低公共祖先">
 <meta name="twitter:description" content="Question:给出二叉树与两个节点，找到该二叉树中两个节点最早的公共祖先
@@ -248,25 +248,7 @@ Solution:TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) { 
         <p>Question:给出二叉树与两个节点，找到该二叉树中两个节点最早的公共祖先</p>
 <p>Solution:<br>TreeNode<em> lowestCommonAncestor(TreeNode</em> root, TreeNode<em> p, TreeNode</em> q) {<br>    if (!root) return NULL;<br>    if (root == p || root == q) return root;<br>    TreeNode <em>L = lowestCommonAncestor(root-&gt;left, p, q);<br>    TreeNode </em>R = lowestCommonAncestor(root-&gt;right, p, q);<br>    if (L &amp;&amp; R) return root;  // if p and q are on both sides<br>    return L ? L : R;<br>}</p>
 <p>Explain:<br>本题的难点在于递归的时候状态的传递，如何告知其他子节点父节点已经找到了一个还是0个目标节点，如果找到了1个那么这个节点到底是第一个节点还是第二个节点</p>
-<p>//type 0:nothing found 1:found p 2:found q<br>TreeNode<em> lowestCommonAncestor(TreeNode</em> root, TreeNode<em> p, TreeNode</em> q,int type){<br>    if (!root) return NULL;<br>    switch(type){<br>        case 0:<br>            if(root == p)<br>                return lowestCommonAncestor(root-&gt;left,  p, q, 1);<br>            else if(root == q)<br>                return lowestCommonAncestor(root-&gt;left,  p, q, 2);<br>            else{<br>                TreeNode<em> left = lowestCommonAncestor(root-&gt;left,  p, q, 1);<br>                TreeNode</em> right = lowestCommonAncestor(root-&gt;left,  p, q, 1);<br>                if (left) return left;<br>                if (right) return right;<br>                else return NULL;<br>            } </p>
-<pre><code>        <span class="keyword">break</span>;
-    <span class="keyword">case</span> <span class="number">1</span>:
-        <span class="keyword">if</span>(root == q) <span class="keyword">return</span> root;
-        <span class="keyword">else</span> {
-            <span class="type">TreeNode</span>* <span class="keyword">left</span> = lowestCommonAncestor(root-&gt;<span class="keyword">left</span>,  p, q, <span class="number">1</span>);
-            <span class="type">TreeNode</span>* <span class="keyword">right</span> = lowestCommonAncestor(root-&gt;<span class="keyword">left</span>,  p, q, <span class="number">1</span>);
-            <span class="keyword">return</span> <span class="keyword">left</span>?<span class="keyword">left</span>:<span class="keyword">right</span>;
-        }
-        <span class="keyword">break</span>;
-    <span class="keyword">case</span> <span class="number">2</span>:
-        <span class="keyword">if</span>(root == p) <span class="keyword">return</span> root;
-        <span class="keyword">else</span> {
-            <span class="type">TreeNode</span>* <span class="keyword">left</span> = lowestCommonAncestor(root-&gt;<span class="keyword">left</span>,  p, q, <span class="number">2</span>);
-            <span class="type">TreeNode</span>* <span class="keyword">right</span> = lowestCommonAncestor(root-&gt;<span class="keyword">left</span>,  p, q, <span class="number">2</span>);
-            <span class="keyword">return</span> <span class="keyword">left</span>?<span class="keyword">left</span>:<span class="keyword">right</span>;
-        }
-}
-</code></pre><p>}</p>
+<p>//type 0:nothing found 1:found p 2:found q<br>TreeNode<em> lowestCommonAncestor(TreeNode</em> root, TreeNode<em> p, TreeNode</em> q,int type){<br>    if (!root) return NULL;<br>    switch(type){<br>        case 0:<br>            if(root == p)<br>                return lowestCommonAncestor(root-&gt;left,  p, q, 1);<br>            else if(root == q)<br>                return lowestCommonAncestor(root-&gt;left,  p, q, 2);<br>            else{<br>                TreeNode<em> left = lowestCommonAncestor(root-&gt;left,  p, q, 1);<br>                TreeNode</em> right = lowestCommonAncestor(root-&gt;left,  p, q, 1);<br>                if (left) return left;<br>                if (right) return right;<br>                else return NULL;<br>            }<br>            break;<br>        case 1:<br>            if(root == q) return root;<br>            else {<br>                TreeNode<em> left = lowestCommonAncestor(root-&gt;left,  p, q, 1);<br>                TreeNode</em> right = lowestCommonAncestor(root-&gt;left,  p, q, 1);<br>                return left?left:right;<br>            }<br>            break;<br>        case 2:<br>            if(root == p) return root;<br>            else {<br>                TreeNode<em> left = lowestCommonAncestor(root-&gt;left,  p, q, 2);<br>                TreeNode</em> right = lowestCommonAncestor(root-&gt;left,  p, q, 2);<br>                return left?left:right;<br>            }<br>    }<br>}</p>
 <p>这个是我的做法，但是没有第一种方法好：<br>    return 表示该节点为根的子树至少有一个目标节点<br>    如果左右递归均不为空，则表示左右节点都有目标节点，则返回这个节点<br>    如果左边为空，则表示不在左子树上，在右子树或者其他兄弟数上，返回右子树</p>
 <p>tips:<br>写递归函数的时候，多种情况从终结的情况写起，往往终结的情况比较简单易分析,这对写其他复杂的情况有帮助<br>改变return的条件可能可以得到不一样的效果</p>
 
