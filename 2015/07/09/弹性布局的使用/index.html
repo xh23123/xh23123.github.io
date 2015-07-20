@@ -3,21 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>二叉树最低公共祖先 | Summer&#39;s blog</title>
+  <title>弹性布局的使用 | Summer&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Question:给出二叉树与两个节点，找到该二叉树中两个节点最早的公共祖先
-Solution:TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {    if (!root) return NULL;    if (root == p || root == q) return root;    TreeNod">
+  <meta name="description" content="有时候我们可能需要让某个层自动填充剩余的部分，比如说一行中两个元素我们想分别让他在左边和右边显示，我们就可以分别对他们使用margin-left和margin-right，然后对左边的加上  -webkit-box-flex: 1;就可以了如果有多个元素定义了这个flex，那么就会按照数字的比例分配。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="二叉树最低公共祖先">
-<meta property="og:url" content="xh23123.github.io/2015/07/13/二叉树最低公共祖先/index.html">
+<meta property="og:title" content="弹性布局的使用">
+<meta property="og:url" content="xh23123.github.io/2015/07/09/弹性布局的使用/index.html">
 <meta property="og:site_name" content="Summer's blog">
-<meta property="og:description" content="Question:给出二叉树与两个节点，找到该二叉树中两个节点最早的公共祖先
-Solution:TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {    if (!root) return NULL;    if (root == p || root == q) return root;    TreeNod">
-<meta property="og:updated_time" content="2015-07-20T02:28:47.616Z">
+<meta property="og:description" content="有时候我们可能需要让某个层自动填充剩余的部分，比如说一行中两个元素我们想分别让他在左边和右边显示，我们就可以分别对他们使用margin-left和margin-right，然后对左边的加上  -webkit-box-flex: 1;就可以了如果有多个元素定义了这个flex，那么就会按照数字的比例分配。">
+<meta property="og:updated_time" content="2015-07-20T05:58:06.199Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="二叉树最低公共祖先">
-<meta name="twitter:description" content="Question:给出二叉树与两个节点，找到该二叉树中两个节点最早的公共祖先
-Solution:TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {    if (!root) return NULL;    if (root == p || root == q) return root;    TreeNod">
+<meta name="twitter:title" content="弹性布局的使用">
+<meta name="twitter:description" content="有时候我们可能需要让某个层自动填充剩余的部分，比如说一行中两个元素我们想分别让他在左边和右边显示，我们就可以分别对他们使用margin-left和margin-right，然后对左边的加上  -webkit-box-flex: 1;就可以了如果有多个元素定义了这个flex，那么就会按照数字的比例分配。">
   
     <link rel="alternative" href="/atom.xml" title="Summer&#39;s blog" type="application/atom+xml">
   
@@ -198,11 +195,11 @@ Solution:TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) { 
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap"><article id="post-二叉树最低公共祖先" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-弹性布局的使用" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2015/07/13/二叉树最低公共祖先/" class="article-date">
-  	<time datetime="2015-07-13T11:06:29.000Z" itemprop="datePublished">2015-07-13</time>
+      <a href="/2015/07/09/弹性布局的使用/" class="article-date">
+  	<time datetime="2015-07-09T11:06:29.000Z" itemprop="datePublished">2015-07-09</time>
 </a>
     </div>
   
@@ -215,7 +212,7 @@ Solution:TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) { 
         
   
     <h1 class="article-title" itemprop="name">
-      二叉树最低公共祖先
+      弹性布局的使用
     </h1>
   
 
@@ -224,7 +221,7 @@ Solution:TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) { 
       <div class="article-info article-info-post">
         
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/algorithm/">algorithm</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/binarytree/">binarytree</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
 	</div>
 
         
@@ -239,12 +236,7 @@ Solution:TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) { 
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Question:给出二叉树与两个节点，找到该二叉树中两个节点最早的公共祖先</p>
-<p>Solution:<br>TreeNode<em> lowestCommonAncestor(TreeNode</em> root, TreeNode<em> p, TreeNode</em> q) {<br>    if (!root) return NULL;<br>    if (root == p || root == q) return root;<br>    TreeNode <em>L = lowestCommonAncestor(root-&gt;left, p, q);<br>    TreeNode </em>R = lowestCommonAncestor(root-&gt;right, p, q);<br>    if (L &amp;&amp; R) return root;  // if p and q are on both sides<br>    return L ? L : R;<br>}</p>
-<p>Explain:<br>本题的难点在于递归的时候状态的传递，如何告知其他子节点父节点已经找到了一个还是0个目标节点，如果找到了1个那么这个节点到底是第一个节点还是第二个节点</p>
-<p>//type 0:nothing found 1:found p 2:found q<br>TreeNode<em> lowestCommonAncestor(TreeNode</em> root, TreeNode<em> p, TreeNode</em> q,int type){<br>    if (!root) return NULL;<br>    switch(type){<br>        case 0:<br>            if(root == p)<br>                return lowestCommonAncestor(root-&gt;left,  p, q, 1);<br>            else if(root == q)<br>                return lowestCommonAncestor(root-&gt;left,  p, q, 2);<br>            else{<br>                TreeNode<em> left = lowestCommonAncestor(root-&gt;left,  p, q, 1);<br>                TreeNode</em> right = lowestCommonAncestor(root-&gt;left,  p, q, 1);<br>                if (left) return left;<br>                if (right) return right;<br>                else return NULL;<br>            }<br>            break;<br>        case 1:<br>            if(root == q) return root;<br>            else {<br>                TreeNode<em> left = lowestCommonAncestor(root-&gt;left,  p, q, 1);<br>                TreeNode</em> right = lowestCommonAncestor(root-&gt;left,  p, q, 1);<br>                return left?left:right;<br>            }<br>            break;<br>        case 2:<br>            if(root == p) return root;<br>            else {<br>                TreeNode<em> left = lowestCommonAncestor(root-&gt;left,  p, q, 2);<br>                TreeNode</em> right = lowestCommonAncestor(root-&gt;left,  p, q, 2);<br>                return left?left:right;<br>            }<br>    }<br>}</p>
-<p>这个是我的做法，但是没有第一种方法好：<br>    return 表示该节点为根的子树至少有一个目标节点<br>    如果左右递归均不为空，则表示左右节点都有目标节点，则返回这个节点<br>    如果左边为空，则表示不在左子树上，在右子树或者其他兄弟数上，返回右子树</p>
-<p>tips:<br>写递归函数的时候，多种情况从终结的情况写起，往往终结的情况比较简单易分析,这对写其他复杂的情况有帮助<br>改变return的条件可能可以得到不一样的效果</p>
+        <p>有时候我们可能需要让某个层自动填充剩余的部分，比如说一行中两个元素我们想分别让他在左边和右边显示，我们就可以分别对他们使用margin-left和margin-right，然后对左边的加上<br>  -webkit-box-flex: 1;<br>就可以了<br>如果有多个元素定义了这个flex，那么就会按照数字的比例分配。</p>
 
       
     </div>
@@ -254,8 +246,17 @@ Solution:TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) { 
     
 <nav id="article-nav">
   
+    <a href="/2015/07/09/模糊效果/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          模糊效果时遇到的困难
+        
+      </div>
+    </a>
   
-    <a href="/2015/07/09/模糊效果/" id="article-nav-older" class="article-nav-link-wrap">
+  
+    <a href="/2015/07/09/后退刷新/" id="article-nav-older" class="article-nav-link-wrap">
       <div class="article-nav-title">模糊效果时遇到的困难</div>
       <strong class="article-nav-caption">></strong>
     </a>
@@ -285,7 +286,7 @@ Solution:TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) { 
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="二叉树最低公共祖先" data-title="二叉树最低公共祖先" data-url="xh23123.github.io/2015/07/13/二叉树最低公共祖先/"></div>
+	<div class="ds-thread" data-thread-key="弹性布局的使用" data-title="弹性布局的使用" data-url="xh23123.github.io/2015/07/09/弹性布局的使用/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">

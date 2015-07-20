@@ -3,21 +3,17 @@
 <head>
   <meta charset="utf-8">
   
-  <title>二叉树最低公共祖先 | Summer&#39;s blog</title>
+  <title>Category: blog | Summer&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Question:给出二叉树与两个节点，找到该二叉树中两个节点最早的公共祖先
-Solution:TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {    if (!root) return NULL;    if (root == p || root == q) return root;    TreeNod">
-<meta property="og:type" content="article">
-<meta property="og:title" content="二叉树最低公共祖先">
-<meta property="og:url" content="xh23123.github.io/2015/07/13/二叉树最低公共祖先/index.html">
+  <meta name="description" content="Walk step by step">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Summer's blog">
+<meta property="og:url" content="xh23123.github.io/categories/blog/page/2/index.html">
 <meta property="og:site_name" content="Summer's blog">
-<meta property="og:description" content="Question:给出二叉树与两个节点，找到该二叉树中两个节点最早的公共祖先
-Solution:TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {    if (!root) return NULL;    if (root == p || root == q) return root;    TreeNod">
-<meta property="og:updated_time" content="2015-07-20T02:28:47.616Z">
+<meta property="og:description" content="Walk step by step">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="二叉树最低公共祖先">
-<meta name="twitter:description" content="Question:给出二叉树与两个节点，找到该二叉树中两个节点最早的公共祖先
-Solution:TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {    if (!root) return NULL;    if (root == p || root == q) return root;    TreeNod">
+<meta name="twitter:title" content="Summer's blog">
+<meta name="twitter:description" content="Walk step by step">
   
     <link rel="alternative" href="/atom.xml" title="Summer&#39;s blog" type="application/atom+xml">
   
@@ -198,112 +194,131 @@ Solution:TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) { 
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap"><article id="post-二叉树最低公共祖先" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap">
   
-    <div class="article-meta">
-      <a href="/2015/07/13/二叉树最低公共祖先/" class="article-date">
-  	<time datetime="2015-07-13T11:06:29.000Z" itemprop="datePublished">2015-07-13</time>
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2015" class="archive-year">2015</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2015/07/09/hexo更换皮肤/" class="archive-article-date">
+  	<time datetime="2015-07-09T11:06:29.000Z" itemprop="datePublished">7月 9</time>
 </a>
-    </div>
+        </div>
+    	 
   
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      二叉树最低公共祖先
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2015/07/09/hexo更换皮肤/">Hexo更换皮肤</a>
     </h1>
   
 
-      </header>
-      
-      <div class="article-info article-info-post">
-        
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/algorithm/">algorithm</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/binarytree/">binarytree</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
 	</div>
 
-        
+          
 	<div class="article-category tagcloud">
 	<a class="article-category-link" href="/categories/blog/">blog</a>
 	</div>
 
 
+        </div>
         <div class="clearfix"></div>
-      </div>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Question:给出二叉树与两个节点，找到该二叉树中两个节点最早的公共祖先</p>
-<p>Solution:<br>TreeNode<em> lowestCommonAncestor(TreeNode</em> root, TreeNode<em> p, TreeNode</em> q) {<br>    if (!root) return NULL;<br>    if (root == p || root == q) return root;<br>    TreeNode <em>L = lowestCommonAncestor(root-&gt;left, p, q);<br>    TreeNode </em>R = lowestCommonAncestor(root-&gt;right, p, q);<br>    if (L &amp;&amp; R) return root;  // if p and q are on both sides<br>    return L ? L : R;<br>}</p>
-<p>Explain:<br>本题的难点在于递归的时候状态的传递，如何告知其他子节点父节点已经找到了一个还是0个目标节点，如果找到了1个那么这个节点到底是第一个节点还是第二个节点</p>
-<p>//type 0:nothing found 1:found p 2:found q<br>TreeNode<em> lowestCommonAncestor(TreeNode</em> root, TreeNode<em> p, TreeNode</em> q,int type){<br>    if (!root) return NULL;<br>    switch(type){<br>        case 0:<br>            if(root == p)<br>                return lowestCommonAncestor(root-&gt;left,  p, q, 1);<br>            else if(root == q)<br>                return lowestCommonAncestor(root-&gt;left,  p, q, 2);<br>            else{<br>                TreeNode<em> left = lowestCommonAncestor(root-&gt;left,  p, q, 1);<br>                TreeNode</em> right = lowestCommonAncestor(root-&gt;left,  p, q, 1);<br>                if (left) return left;<br>                if (right) return right;<br>                else return NULL;<br>            }<br>            break;<br>        case 1:<br>            if(root == q) return root;<br>            else {<br>                TreeNode<em> left = lowestCommonAncestor(root-&gt;left,  p, q, 1);<br>                TreeNode</em> right = lowestCommonAncestor(root-&gt;left,  p, q, 1);<br>                return left?left:right;<br>            }<br>            break;<br>        case 2:<br>            if(root == p) return root;<br>            else {<br>                TreeNode<em> left = lowestCommonAncestor(root-&gt;left,  p, q, 2);<br>                TreeNode</em> right = lowestCommonAncestor(root-&gt;left,  p, q, 2);<br>                return left?left:right;<br>            }<br>    }<br>}</p>
-<p>这个是我的做法，但是没有第一种方法好：<br>    return 表示该节点为根的子树至少有一个目标节点<br>    如果左右递归均不为空，则表示左右节点都有目标节点，则返回这个节点<br>    如果左边为空，则表示不在左子树上，在右子树或者其他兄弟数上，返回右子树</p>
-<p>tips:<br>写递归函数的时候，多种情况从终结的情况写起，往往终结的情况比较简单易分析,这对写其他复杂的情况有帮助<br>改变return的条件可能可以得到不一样的效果</p>
-
-      
-    </div>
-    
+    </header>
   </div>
+</article>
   
     
-<nav id="article-nav">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2015/07/05/shine/" class="archive-article-date">
+  	<time datetime="2015-07-05T11:06:29.000Z" itemprop="datePublished">7月 5</time>
+</a>
+        </div>
+    	 
   
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2015/07/05/shine/">Hexo搭建记录</a>
+    </h1>
   
-    <a href="/2015/07/09/模糊效果/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">模糊效果时遇到的困难</div>
-      <strong class="article-nav-caption">></strong>
-    </a>
-  
-</nav>
 
-  
-</article>
-
-
-<div class="share">
-	<!-- JiaThis Button BEGIN -->
-	<div class="jiathis_style">
-		<span class="jiathis_txt">分享到：</span>
-		<a class="jiathis_button_tsina"></a>
-		<a class="jiathis_button_cqq"></a>
-		<a class="jiathis_button_douban"></a>
-		<a class="jiathis_button_weixin"></a>
-		<a class="jiathis_button_tumblr"></a>
-		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+        <div class="article-info info-on-right">
+          
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/日记/">日记</a></li></ul>
 	</div>
-	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
-	<!-- JiaThis Button END -->
-</div>
+
+          
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/blog/">blog</a>
+	</div>
 
 
+        </div>
+        <div class="clearfix"></div>
+    </header>
+  </div>
+</article>
+  
+    
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2015/07/05/hello-world/" class="archive-article-date">
+  	<time datetime="2015-07-05T11:06:29.000Z" itemprop="datePublished">7月 5</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2015/07/05/hello-world/">Hexod搭建</a>
+    </h1>
+  
 
-<div class="duoshuo">
-	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="二叉树最低公共祖先" data-title="二叉树最低公共祖先" data-url="xh23123.github.io/2015/07/13/二叉树最低公共祖先/"></div>
-	<!-- 多说评论框 end -->
-	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-	<script type="text/javascript">
-	var duoshuoQuery = {short_name:"true"};
-	(function() {
-		var ds = document.createElement('script');
-		ds.type = 'text/javascript';ds.async = true;
-		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-		ds.charset = 'UTF-8';
-		(document.getElementsByTagName('head')[0] 
-		 || document.getElementsByTagName('body')[0]).appendChild(ds);
-	})();
-	</script>
-	<!-- 多说公共JS代码 end -->
-</div>
+        <div class="article-info info-on-right">
+          
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
+	</div>
+
+          
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/blog/">blog</a>
+	</div>
 
 
+        </div>
+        <div class="clearfix"></div>
+    </header>
+  </div>
+</article>
+  
+  
+    </div></section>
+  
 
+    
+    <nav id="page-nav">
+      <a class="extend prev" rel="prev" href="/categories/blog/">&laquo; Prev</a><a class="page-number" href="/categories/blog/">1</a><span class="page-number current">2</span>
+    </nav>
+  
 
 </div>
       <footer id="footer">
@@ -336,10 +351,10 @@ Solution:TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) { 
 		mathjax: true,
 		animate: true,
 		isHome: false,
-		isPost: true,
+		isPost: false,
 		isArchive: false,
 		isTag: false,
-		isCategory: false,
+		isCategory: true,
 		open_in_new: false
 	}
 </script>
