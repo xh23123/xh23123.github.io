@@ -196,6 +196,195 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-模糊效果" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/07/09/模糊效果/" class="article-date">
+  	<time datetime="2015-07-09T11:06:29.000Z" itemprop="datePublished">2015-07-09</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/07/09/模糊效果/">模糊效果时遇到的困难</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>在做电影界面优化的时候有一个地方要求用模糊效果处理，效果是这样的<br><img src="img/blur_1.png"><br>使用下面这段代码可以实现模糊效果：</p>
+<p>-webkit-filter: blur(20)</p>
+<p>查了一下这句话的实现原理，是把每个点向周围20个像素进行发散，所以在图片原来大小的周围也会出现一些淡淡的模糊效果，要想图片维持原来的大小，必须加上</p>
+<p>overflow： hidden</p>
+<p>做完这些后发现在电脑上达到了预期的效果。</p>
+<p>在手机上进行测试后发现有的手机上并没有出现预期的模糊效果，原来是有的手机并不支持这个效果，通过：</p>
+<p><code>if(&#39;-webkit-filter&#39; in document.element.style)</code></p>
+<p>来检查是否支持滤镜属性<br>与美工商量后，决定对于不支持这个属性的手机做出如下处理：<br>将图片放大去中间的一部分，然后加上一片黑色的透明度50%的层<br>对于支持模糊效果的手机，考虑到部分图片是白色的，由于字也是白色的，所以在图片上也会加上不透明度为80%的黑色层</p>
+<p>然后在手机上再进行测试，发现在三星的手机上模糊效果非常的卡，非常影响用户的体验，没办法还是改成了都不支持的效果，如果要想使用这个效果，并且获得比较好的用户体验，应该在数据库中存一张模糊的图品，然后前端只需要获取该图片当背静就可以了，减少了渲染的时间。</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/blog/">blog</a>
+	</div>
+
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
+    <article id="post-关于切图" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/07/09/关于切图/" class="article-date">
+  	<time datetime="2015-07-09T11:06:29.000Z" itemprop="datePublished">2015-07-09</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/07/09/关于切图/">关于切图</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>一般前端会给两张图，一张是png格式的图，一张是jpg格式的图，png格式就是我们要用的图，jpg格式上面一般会标有每个东西的左上角坐标，以及图形的长和宽</p>
+<p>我们要使用应该有一下2个css类</p>
+<p>源类，就是整张图片，大小应该是整张图片的大小<br>.movie-star-ele {<br>  background: url(‘/res/image/movie/movie_star.png’)no-repeat;<br>  background-size: 9.2rem 15.35rem;<br>}</p>
+<p>该类标出这个图形的坐标，大小<br>.movie-star-five {<br>  background-position: 0 -2.9rem;<br>  width: 6.7rem;<br>  height: 1.2rem;<br>}</p>
+<p>这样就可以显示出想要的图片了</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/blog/">blog</a>
+	</div>
+
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
+    <article id="post-规定行数与察看更多的实现" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/07/09/规定行数与察看更多的实现/" class="article-date">
+  	<time datetime="2015-07-09T11:06:29.000Z" itemprop="datePublished">2015-07-09</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/07/09/规定行数与察看更多的实现/">规定行数与查看更多的实现</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>要规定几行，就用下面这个类就可以，就是ellipsis表示超过了就是…的表示<br>.three-line {<br>display: -webkit-box;<br>overflow: hidden;<br>text-overflow: ellipsis;<br>-webkit-box-orient: vertical;<br>-webkit-line-clamp: 3;<br>}<br>加上这个类后就可以使他只有规定的行然<br>如果想实现点击查看更多后显示完整的内容，只需要在点击事件中把这个类中去掉即可</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/blog/">blog</a>
+	</div>
+
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
     <article id="post-hexo更换皮肤" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
