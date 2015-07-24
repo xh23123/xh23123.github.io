@@ -196,6 +196,124 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-居中的办法" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/07/22/居中的办法/" class="article-date">
+  	<time datetime="2015-07-22T11:06:29.000Z" itemprop="datePublished">2015-07-22</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/07/22/居中的办法/">居中的办法</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>2个居中的办法<br>1、position设为absolute，left为50%，margin-left为大小的一半的负数<br>2、两边加上flex为1的空层，封装在一个box里面</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/blog/">blog</a>
+	</div>
+
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
+    <article id="post-在第一个页面就加载所有资源" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/07/22/在第一个页面就加载所有资源/" class="article-date">
+  	<time datetime="2015-07-22T11:06:29.000Z" itemprop="datePublished">2015-07-22</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/07/22/在第一个页面就加载所有资源/">预加载所有资源</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>如果把一个div设置成了display-none，那么这个div的背景图片等资源就会是在这个div的display-none消失的时候才加载，这非常影响用户体验<br>解决的办法就是在最开始的地方使用img，把src设置成要预加载的图片，并且加上displaynone，这样就实现了预加载。</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/blog/">blog</a>
+	</div>
+
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
     <article id="post-二叉树最低公共祖先" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -260,10 +378,10 @@
 
 
   
-    <article id="post-到底部自动加载更多" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-单位rem简介" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2015/07/09/到底部自动加载更多/" class="article-date">
+      <a href="/2015/07/09/单位rem简介/" class="article-date">
   	<time datetime="2015-07-09T11:06:29.000Z" itemprop="datePublished">2015-07-09</time>
 </a>
     </div>
@@ -277,7 +395,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2015/07/09/到底部自动加载更多/">到底部时自动加载更多</a>
+      <a class="article-title" href="/2015/07/09/单位rem简介/">单位rem简介</a>
     </h1>
   
 
@@ -286,7 +404,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>判断页面到底了进行判断<br>clientHeight div的显示高度<br>offsetHeight 总高度<br>scrollTop 上边的位置 [0,clientHeight-offsetHeight]<br>1、判断滚动条滚动到最底端： scrollTop == (offsetHeight – clientHeight)<br>2、在滚动条距离底端50px以内： (offsetHeight – clientHeight) – scrollTop &lt;= 50<br>3、在滚动条距离底端5%以内： scrollTop / (offsetHeight – clientHeight) &gt;= 0.95</p>
+        <p>考虑到移动端的分辨率大小不一，我们一般都是用单位rem来适配不同的分辨率，下面来介绍一下rem这个单位<br>而rem是相对于根元素html，这样就意味着，我们只需要在根元素确定一个参考值<br>比如说我们定义了<br>html {font-size: 15px}<br>那么1rem就是15px<br>所以，我们可以根据不同的设备定义不同的根源素font-size，这个时候rem用上去就像是能够自动适配手机一样。</p>
 
       
     </div>
@@ -438,128 +556,9 @@
 
 
   
-    <article id="post-可以实现并排的box" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/07/09/可以实现并排的box/" class="article-date">
-  	<time datetime="2015-07-09T11:06:29.000Z" itemprop="datePublished">2015-07-09</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/07/09/可以实现并排的box/">一行中并排显示</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>下面这个类使子元素水平存在，并且中间是在同一条水平线上的<br>.box {<br>  display: -webkit-box;<br>  -webkit-box-pack: start;<br>  -webkit-box-orient: horizontal;<br>  -webkit-box-align: stretch;<br>}<br>box-pack 属性规定当框大于子元素的尺寸，在何处放置子元素<br>box-orient 属性规定框的子元素应该被水平或垂直排列。</p>
-<p>如果不想让子元素处在同一条水平线上，只需要<br>display: -webkit-box;<br>就可以了</p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/blog/">blog</a>
-	</div>
-
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-单位rem简介" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/07/09/单位rem简介/" class="article-date">
-  	<time datetime="2015-07-09T11:06:29.000Z" itemprop="datePublished">2015-07-09</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/07/09/单位rem简介/">单位rem简介</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>考虑到移动端的分辨率大小不一，我们一般都是用单位rem来适配不同的分辨率，下面来介绍一下rem这个单位<br>而rem是相对于根元素html，这样就意味着，我们只需要在根元素确定一个参考值<br>比如说我们定义了<br>html {font-size: 15px}<br>那么1rem就是15px<br>所以，我们可以根据不同的设备定义不同的根源素font-size，这个时候rem用上去就像是能够自动适配手机一样。</p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/blog/">blog</a>
-	</div>
-
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
   
     <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
     </nav>
   
 </div>
