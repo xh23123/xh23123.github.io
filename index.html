@@ -114,7 +114,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/algorithm/" style="font-size: 10px;">algorithm</a> <a href="/tags/binarytree/" style="font-size: 10px;">binarytree</a> <a href="/tags/hexo/" style="font-size: 15px;">hexo</a> <a href="/tags/python/" style="font-size: 10px;">python</a> <a href="/tags/前端/" style="font-size: 20px;">前端</a> <a href="/tags/日记/" style="font-size: 10px;">日记</a>
+						<a href="/tags/Linux/" style="font-size: 16.67px;">Linux</a> <a href="/tags/Python/" style="font-size: 10px;">Python</a> <a href="/tags/algorithm/" style="font-size: 10px;">algorithm</a> <a href="/tags/binarytree/" style="font-size: 10px;">binarytree</a> <a href="/tags/hexo/" style="font-size: 13.33px;">hexo</a> <a href="/tags/python/" style="font-size: 10px;">python</a> <a href="/tags/前端/" style="font-size: 20px;">前端</a> <a href="/tags/日记/" style="font-size: 10px;">日记</a> <a href="/tags/杂物/" style="font-size: 10px;">杂物</a> <a href="/tags/算法/" style="font-size: 10px;">算法</a> <a href="/tags/设计模式/" style="font-size: 10px;">设计模式</a>
 					</div>
 				</section>
 				
@@ -196,6 +196,291 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-从0到n-1中生成m个不重复的数字" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/08/23/从0到n-1中生成m个不重复的数字/" class="article-date">
+  	<time datetime="2015-08-22T22:13:25.000Z" itemprop="datePublished">2015-08-23</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/08/23/从0到n-1中生成m个不重复的数字/">从0到n-1中生成m个不重复的数字</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>knuth(int n, int m)<br>{<br>    srand((unsigned int)time(0));<br>    for (int i = 0; i &lt; n; i++) {<br>        if ( rand()%(n-i)&lt;m ) {<br>            cout &lt;&lt; i &lt;&lt; endl;<br>            (m—);<br>        }<br>     }<br>}</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/算法/">算法</a></li></ul>
+	</div>
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
+    <article id="post-python读写Json文件" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/08/17/python读写Json文件/" class="article-date">
+  	<time datetime="2015-08-17T12:14:26.000Z" itemprop="datePublished">2015-08-17</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/08/17/python读写Json文件/">python读写Json文件</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="读">读</h1><p>file = ‘test.json’<br>fp = open(file, ‘r’)<br>dict = json.loads(fp.read())<br>fp.close()</p>
+<h1 id="写">写</h1><p>testDict = {‘a’:1,’b’:2}<br>file = ‘my.json’<br>fp = open(file,’w’)<br>fp.write(json.dumps(testDict))<br>fp.close()</p>
+<p>重要函数</p>
+<p>编码：把一个Python对象编码转换成Json字符串   json.dumps()<br>解码：把Json格式字符串解码转换成Python对象   json.loads()</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/">Python</a></li></ul>
+	</div>
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
+    <article id="post-svn使用" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/08/13/svn使用/" class="article-date">
+  	<time datetime="2015-08-13T12:43:54.000Z" itemprop="datePublished">2015-08-13</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/08/13/svn使用/">svn使用</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>svn diff<br>svn ci<br>svn add<br>svn co 地址<br>svn up<br>svn merge</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/杂物/">杂物</a></li></ul>
+	</div>
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
+    <article id="post-Django中的MVT对比MVC" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/08/12/Django中的MVT对比MVC/" class="article-date">
+  	<time datetime="2015-08-11T18:27:25.000Z" itemprop="datePublished">2015-08-12</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/08/12/Django中的MVT对比MVC/">Django中的MVT对比MVC</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>传统的mvc模式<br>model模型：负责数据从数据库中存入取出。</p>
+<p>view视图：将数据格式化后呈现给用户。</p>
+<p>controller控制器：根据浏览器的url地址访问“模型”获取数据，并调用“视图”显示这些数据。</p>
+<p>控制器将模型和视图隔离，作为它们连接的中间桥梁。</p>
+<p>Django MTV模式<br>Django将MVC模式做了改进：<br>    模型部分没变；<br>    控制器部分由URLconf来实现，即urls.py，其机制是使用正则表达式匹配URL，然后调用views.py中合适的函数；<br>    而视图部分改成两部分，view视图（views.py）和template模板（html和模板语言）。即MTV模式，模式-模板-视图。视图方法定义了要显示模型中的哪些数据，模板决定数据的显示方式。</p>
+<p>注意这里的view视图跟mvc中的view视图是有区别的：<br>    Django view仅仅决定要展示那些数据给用户，至于如何展示交给了模板template，换句话说，作为业务逻辑层，连接模板和模型的桥梁：存取模型、渲染合适的模板。</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/设计模式/">设计模式</a></li></ul>
+	</div>
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
+    <article id="post-Linux文件属性" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/08/10/Linux文件属性/" class="article-date">
+  	<time datetime="2015-08-10T03:49:30.000Z" itemprop="datePublished">2015-08-10</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/08/10/Linux文件属性/">Linux文件属性</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>dr-xr-xr-x   2 root root 4096 Dec 14  2012 bin</p>
+<p>以一个表示类型，d表示目录 -表示文件</p>
+<p>更改文件属主：<br>chown [–R] 属主名 文件名<br>更改权限：<br>chmod [-R] a+u xyz<br>其中-R表示递归操作文件夹中所有文件</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">Linux</a></li></ul>
+	</div>
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
     <article id="post-Linux系统目录结构" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -230,307 +515,11 @@
     <div class="article-info article-info-index">
       
       
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-Python面向对象基础" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/07/26/Python面向对象基础/" class="article-date">
-  	<time datetime="2015-07-26T11:06:29.000Z" itemprop="datePublished">2015-07-26</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/07/26/Python面向对象基础/">python面向对象基础</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>1、<br>要创建一个类的实例，你可以使用类的名称，并通过<strong>init</strong>方法接受参数。<br>如emp1 = Employee(“Zara”, 2000)</p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li></ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/blog/">blog</a>
-	</div>
-
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-Linux启动过程" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/07/24/Linux启动过程/" class="article-date">
-  	<time datetime="2015-07-24T11:06:29.000Z" itemprop="datePublished">2015-07-24</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/07/24/Linux启动过程/">Linux 启动过程</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>1、BIOS开机自检，按照BIOS中设置的启动设备（通常是硬盘）来启动<br>2、操作系统接管硬件以后，首先读入 /boot 目录下的内核文件。<br>3、运行init()，init 进程是系统所有进程的起点，init 程序首先是需要读取配置文件 /etc/inittab。<br>4、许多程序需要开机启动。它们在Windows叫做”服务”（service），在Linux就叫做”守护进程”（daemon）。init进程的一大任务，就是去运行这些开机启动的程序。启动时根据运行级别确定运行的程序，运行级别3：完全的多用户状态(有NFS)，登陆后进入控制台命令行模式，运行级别5：X11控制台，登陆后进入图形GUI模式。<br>5、在init的配置文件中有这么一行： si::sysinit:/etc/rc.d/rc.sysinit　它调用执行了/etc/rc.d/rc.sysinit，做系统初始化<br>6、用户登录系统，一般来说，用户的登录方式有三种：（1）命令行登录（2）ssh登录（3）图形界面登录<br>总结：<br>磁盘启动—&gt;操作系统接管—&gt;读入内核文件—&gt;init进程—&gt;守护进程（根据优先级选择）—&gt;系统变量初始化—&gt;用户系统登陆</p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
 	<div class="article-tag tagcloud">
 		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">Linux</a></li></ul>
 	</div>
 
       
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/blog/">blog</a>
-	</div>
-
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-居中的办法" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/07/22/居中的办法/" class="article-date">
-  	<time datetime="2015-07-22T11:06:29.000Z" itemprop="datePublished">2015-07-22</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/07/22/居中的办法/">居中的办法</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>2个居中的办法<br>1、position设为absolute，left为50%，margin-left为大小的一半的负数<br>2、两边加上flex为1的空层，封装在一个box里面</p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/blog/">blog</a>
-	</div>
-
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-在第一个页面就加载所有资源" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/07/22/在第一个页面就加载所有资源/" class="article-date">
-  	<time datetime="2015-07-22T11:06:29.000Z" itemprop="datePublished">2015-07-22</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/07/22/在第一个页面就加载所有资源/">预加载所有资源</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>如果把一个div设置成了display-none，那么这个div的背景图片等资源就会是在这个div的display-none消失的时候才加载，这非常影响用户体验<br>解决的办法就是在最开始的地方使用img，把src设置成要预加载的图片，并且加上displaynone，这样就实现了预加载。</p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/blog/">blog</a>
-	</div>
-
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-二叉树最低公共祖先" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/07/13/二叉树最低公共祖先/" class="article-date">
-  	<time datetime="2015-07-13T11:06:29.000Z" itemprop="datePublished">2015-07-13</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/07/13/二叉树最低公共祖先/">二叉树最低公共祖先</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Question:给出二叉树与两个节点，找到该二叉树中两个节点最早的公共祖先</p>
-<p>Solution:<br>TreeNode<em> lowestCommonAncestor(TreeNode</em> root, TreeNode<em> p, TreeNode</em> q) {<br>    if (!root) return NULL;<br>    if (root == p || root == q) return root;<br>    TreeNode <em>L = lowestCommonAncestor(root-&gt;left, p, q);<br>    TreeNode </em>R = lowestCommonAncestor(root-&gt;right, p, q);<br>    if (L &amp;&amp; R) return root;  // if p and q are on both sides<br>    return L ? L : R;<br>}</p>
-<p>Explain:<br>本题的难点在于递归的时候状态的传递，如何告知其他子节点父节点已经找到了一个还是0个目标节点，如果找到了1个那么这个节点到底是第一个节点还是第二个节点</p>
-<p>//type 0:nothing found 1:found p 2:found q<br>TreeNode<em> lowestCommonAncestor(TreeNode</em> root, TreeNode<em> p, TreeNode</em> q,int type){<br>    if (!root) return NULL;<br>    switch(type){<br>        case 0:<br>            if(root == p)<br>                return lowestCommonAncestor(root-&gt;left,  p, q, 1);<br>            else if(root == q)<br>                return lowestCommonAncestor(root-&gt;left,  p, q, 2);<br>            else{<br>                TreeNode<em> left = lowestCommonAncestor(root-&gt;left,  p, q, 1);<br>                TreeNode</em> right = lowestCommonAncestor(root-&gt;left,  p, q, 1);<br>                if (left) return left;<br>                if (right) return right;<br>                else return NULL;<br>            }<br>            break;<br>        case 1:<br>            if(root == q) return root;<br>            else {<br>                TreeNode<em> left = lowestCommonAncestor(root-&gt;left,  p, q, 1);<br>                TreeNode</em> right = lowestCommonAncestor(root-&gt;left,  p, q, 1);<br>                return left?left:right;<br>            }<br>            break;<br>        case 2:<br>            if(root == p) return root;<br>            else {<br>                TreeNode<em> left = lowestCommonAncestor(root-&gt;left,  p, q, 2);<br>                TreeNode</em> right = lowestCommonAncestor(root-&gt;left,  p, q, 2);<br>                return left?left:right;<br>            }<br>    }<br>}</p>
-<p>这个是我的做法，但是没有第一种方法好：<br>    return 表示该节点为根的子树至少有一个目标节点<br>    如果左右递归均不为空，则表示左右节点都有目标节点，则返回这个节点<br>    如果左边为空，则表示不在左子树上，在右子树或者其他兄弟数上，返回右子树</p>
-<p>tips:<br>写递归函数的时候，多种情况从终结的情况写起，往往终结的情况比较简单易分析,这对写其他复杂的情况有帮助<br>改变return的条件可能可以得到不一样的效果</p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/algorithm/">algorithm</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/binarytree/">binarytree</a></li></ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/blog/">blog</a>
-	</div>
-
 
       
       <div class="clearfix"></div>
@@ -549,7 +538,7 @@
   
   
     <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
     </nav>
   
 </div>

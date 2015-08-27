@@ -114,7 +114,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/algorithm/" style="font-size: 10px;">algorithm</a> <a href="/tags/binarytree/" style="font-size: 10px;">binarytree</a> <a href="/tags/hexo/" style="font-size: 15px;">hexo</a> <a href="/tags/python/" style="font-size: 10px;">python</a> <a href="/tags/前端/" style="font-size: 20px;">前端</a> <a href="/tags/日记/" style="font-size: 10px;">日记</a>
+						<a href="/tags/Linux/" style="font-size: 16.67px;">Linux</a> <a href="/tags/Python/" style="font-size: 10px;">Python</a> <a href="/tags/algorithm/" style="font-size: 10px;">algorithm</a> <a href="/tags/binarytree/" style="font-size: 10px;">binarytree</a> <a href="/tags/hexo/" style="font-size: 13.33px;">hexo</a> <a href="/tags/python/" style="font-size: 10px;">python</a> <a href="/tags/前端/" style="font-size: 20px;">前端</a> <a href="/tags/日记/" style="font-size: 10px;">日记</a> <a href="/tags/杂物/" style="font-size: 10px;">杂物</a> <a href="/tags/算法/" style="font-size: 10px;">算法</a> <a href="/tags/设计模式/" style="font-size: 10px;">设计模式</a>
 					</div>
 				</section>
 				
@@ -196,11 +196,11 @@
 </nav>
       <div class="body-wrap">
   
-    <article id="post-可以实现并排的box" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-Python面向对象基础" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2015/07/09/可以实现并排的box/" class="article-date">
-  	<time datetime="2015-07-09T11:06:29.000Z" itemprop="datePublished">2015-07-09</time>
+      <a href="/2015/07/26/Python面向对象基础/" class="article-date">
+  	<time datetime="2015-07-26T11:06:29.000Z" itemprop="datePublished">2015-07-26</time>
 </a>
     </div>
   
@@ -213,7 +213,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2015/07/09/可以实现并排的box/">一行中并排显示</a>
+      <a class="article-title" href="/2015/07/26/Python面向对象基础/">python面向对象基础</a>
     </h1>
   
 
@@ -222,8 +222,125 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>下面这个类使子元素水平存在，并且中间是在同一条水平线上的<br>.box {<br>  display: -webkit-box;<br>  -webkit-box-pack: start;<br>  -webkit-box-orient: horizontal;<br>  -webkit-box-align: stretch;<br>}<br>box-pack 属性规定当框大于子元素的尺寸，在何处放置子元素<br>box-orient 属性规定框的子元素应该被水平或垂直排列。</p>
-<p>如果不想让子元素处在同一条水平线上，只需要<br>display: -webkit-box;<br>就可以了</p>
+        <p>1、<br>要创建一个类的实例，你可以使用类的名称，并通过<strong>init</strong>方法接受参数。<br>如emp1 = Employee(“Zara”, 2000)</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li></ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/blog/">blog</a>
+	</div>
+
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
+    <article id="post-Linux启动过程" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/07/24/Linux启动过程/" class="article-date">
+  	<time datetime="2015-07-24T11:06:29.000Z" itemprop="datePublished">2015-07-24</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/07/24/Linux启动过程/">Linux 启动过程</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>1、BIOS开机自检，按照BIOS中设置的启动设备（通常是硬盘）来启动<br>2、操作系统接管硬件以后，首先读入 /boot 目录下的内核文件。<br>3、运行init()，init 进程是系统所有进程的起点，init 程序首先是需要读取配置文件 /etc/inittab。<br>4、许多程序需要开机启动。它们在Windows叫做”服务”（service），在Linux就叫做”守护进程”（daemon）。init进程的一大任务，就是去运行这些开机启动的程序。启动时根据运行级别确定运行的程序，运行级别3：完全的多用户状态(有NFS)，登陆后进入控制台命令行模式，运行级别5：X11控制台，登陆后进入图形GUI模式。<br>5、在init的配置文件中有这么一行： si::sysinit:/etc/rc.d/rc.sysinit　它调用执行了/etc/rc.d/rc.sysinit，做系统初始化<br>6、用户登录系统，一般来说，用户的登录方式有三种：（1）命令行登录（2）ssh登录（3）图形界面登录<br>总结：<br>磁盘启动—&gt;操作系统接管—&gt;读入内核文件—&gt;init进程—&gt;守护进程（根据优先级选择）—&gt;系统变量初始化—&gt;用户系统登陆</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">Linux</a></li></ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/blog/">blog</a>
+	</div>
+
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
+    <article id="post-居中的办法" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/07/22/居中的办法/" class="article-date">
+  	<time datetime="2015-07-22T11:06:29.000Z" itemprop="datePublished">2015-07-22</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/07/22/居中的办法/">居中的办法</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>2个居中的办法<br>1、position设为absolute，left为50%，margin-left为大小的一半的负数<br>2、两边加上flex为1的空层，封装在一个box里面</p>
 
       
     </div>
@@ -256,11 +373,11 @@
 
 
   
-    <article id="post-单位rem简介" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-在第一个页面就加载所有资源" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2015/07/09/单位rem简介/" class="article-date">
-  	<time datetime="2015-07-09T11:06:29.000Z" itemprop="datePublished">2015-07-09</time>
+      <a href="/2015/07/22/在第一个页面就加载所有资源/" class="article-date">
+  	<time datetime="2015-07-22T11:06:29.000Z" itemprop="datePublished">2015-07-22</time>
 </a>
     </div>
   
@@ -273,7 +390,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2015/07/09/单位rem简介/">单位rem简介</a>
+      <a class="article-title" href="/2015/07/22/在第一个页面就加载所有资源/">预加载所有资源</a>
     </h1>
   
 
@@ -282,7 +399,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>考虑到移动端的分辨率大小不一，我们一般都是用单位rem来适配不同的分辨率，下面来介绍一下rem这个单位<br>而rem是相对于根元素html，这样就意味着，我们只需要在根元素确定一个参考值<br>比如说我们定义了<br>html {font-size: 15px}<br>那么1rem就是15px<br>所以，我们可以根据不同的设备定义不同的根源素font-size，这个时候rem用上去就像是能够自动适配手机一样。</p>
+        <p>如果把一个div设置成了display-none，那么这个div的背景图片等资源就会是在这个div的display-none消失的时候才加载，这非常影响用户体验<br>解决的办法就是在最开始的地方使用img，把src设置成要预加载的图片，并且加上displaynone，这样就实现了预加载。</p>
 
       
     </div>
@@ -292,6 +409,70 @@
       
 	<div class="article-tag tagcloud">
 		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/blog/">blog</a>
+	</div>
+
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
+    <article id="post-二叉树最低公共祖先" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/07/13/二叉树最低公共祖先/" class="article-date">
+  	<time datetime="2015-07-13T11:06:29.000Z" itemprop="datePublished">2015-07-13</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/07/13/二叉树最低公共祖先/">二叉树最低公共祖先</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Question:给出二叉树与两个节点，找到该二叉树中两个节点最早的公共祖先</p>
+<p>Solution:<br>TreeNode<em> lowestCommonAncestor(TreeNode</em> root, TreeNode<em> p, TreeNode</em> q) {<br>    if (!root) return NULL;<br>    if (root == p || root == q) return root;<br>    TreeNode <em>L = lowestCommonAncestor(root-&gt;left, p, q);<br>    TreeNode </em>R = lowestCommonAncestor(root-&gt;right, p, q);<br>    if (L &amp;&amp; R) return root;  // if p and q are on both sides<br>    return L ? L : R;<br>}</p>
+<p>Explain:<br>本题的难点在于递归的时候状态的传递，如何告知其他子节点父节点已经找到了一个还是0个目标节点，如果找到了1个那么这个节点到底是第一个节点还是第二个节点</p>
+<p>//type 0:nothing found 1:found p 2:found q<br>TreeNode<em> lowestCommonAncestor(TreeNode</em> root, TreeNode<em> p, TreeNode</em> q,int type){<br>    if (!root) return NULL;<br>    switch(type){<br>        case 0:<br>            if(root == p)<br>                return lowestCommonAncestor(root-&gt;left,  p, q, 1);<br>            else if(root == q)<br>                return lowestCommonAncestor(root-&gt;left,  p, q, 2);<br>            else{<br>                TreeNode<em> left = lowestCommonAncestor(root-&gt;left,  p, q, 1);<br>                TreeNode</em> right = lowestCommonAncestor(root-&gt;left,  p, q, 1);<br>                if (left) return left;<br>                if (right) return right;<br>                else return NULL;<br>            }<br>            break;<br>        case 1:<br>            if(root == q) return root;<br>            else {<br>                TreeNode<em> left = lowestCommonAncestor(root-&gt;left,  p, q, 1);<br>                TreeNode</em> right = lowestCommonAncestor(root-&gt;left,  p, q, 1);<br>                return left?left:right;<br>            }<br>            break;<br>        case 2:<br>            if(root == p) return root;<br>            else {<br>                TreeNode<em> left = lowestCommonAncestor(root-&gt;left,  p, q, 2);<br>                TreeNode</em> right = lowestCommonAncestor(root-&gt;left,  p, q, 2);<br>                return left?left:right;<br>            }<br>    }<br>}</p>
+<p>这个是我的做法，但是没有第一种方法好：<br>    return 表示该节点为根的子树至少有一个目标节点<br>    如果左右递归均不为空，则表示左右节点都有目标节点，则返回这个节点<br>    如果左边为空，则表示不在左子树上，在右子树或者其他兄弟数上，返回右子树</p>
+<p>tips:<br>写递归函数的时候，多种情况从终结的情况写起，往往终结的情况比较简单易分析,这对写其他复杂的情况有帮助<br>改变return的条件可能可以得到不一样的效果</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/algorithm/">algorithm</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/binarytree/">binarytree</a></li></ul>
 	</div>
 
       
@@ -382,190 +563,9 @@
 
 
   
-    <article id="post-关于切图" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/07/09/关于切图/" class="article-date">
-  	<time datetime="2015-07-09T11:06:29.000Z" itemprop="datePublished">2015-07-09</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/07/09/关于切图/">关于切图</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>一般前端会给两张图，一张是png格式的图，一张是jpg格式的图，png格式就是我们要用的图，jpg格式上面一般会标有每个东西的左上角坐标，以及图形的长和宽</p>
-<p>我们要使用应该有一下2个css类</p>
-<p>源类，就是整张图片，大小应该是整张图片的大小<br>.movie-star-ele {<br>  background: url(‘/res/image/movie/movie_star.png’)no-repeat;<br>  background-size: 9.2rem 15.35rem;<br>}</p>
-<p>该类标出这个图形的坐标，大小<br>.movie-star-five {<br>  background-position: 0 -2.9rem;<br>  width: 6.7rem;<br>  height: 1.2rem;<br>}</p>
-<p>这样就可以显示出想要的图片了</p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/blog/">blog</a>
-	</div>
-
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-规定行数与察看更多的实现" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/07/09/规定行数与察看更多的实现/" class="article-date">
-  	<time datetime="2015-07-09T11:06:29.000Z" itemprop="datePublished">2015-07-09</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/07/09/规定行数与察看更多的实现/">规定行数与查看更多的实现</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>要规定几行，就用下面这个类就可以，就是ellipsis表示超过了就是…的表示<br>.three-line {<br>display: -webkit-box;<br>overflow: hidden;<br>text-overflow: ellipsis;<br>-webkit-box-orient: vertical;<br>-webkit-line-clamp: 3;<br>}<br>加上这个类后就可以使他只有规定的行然<br>如果想实现点击查看更多后显示完整的内容，只需要在点击事件中把这个类中去掉即可</p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/blog/">blog</a>
-	</div>
-
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-弹性布局的使用" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/07/09/弹性布局的使用/" class="article-date">
-  	<time datetime="2015-07-09T11:06:29.000Z" itemprop="datePublished">2015-07-09</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/07/09/弹性布局的使用/">弹性布局的使用</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>有时候我们可能需要让某个层自动填充剩余的部分，比如说一行中两个元素我们想分别让他在左边和右边显示，我们就可以分别对他们使用margin-left和margin-right，然后对左边的加上<br>  -webkit-box-flex: 1;<br>就可以了<br>如果有多个元素定义了这个flex，那么就会按照数字的比例分配。</p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/blog/">blog</a>
-	</div>
-
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
+      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
     </nav>
   
 </div>
