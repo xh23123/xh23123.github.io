@@ -114,7 +114,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/algorithm/" style="font-size: 10px;">algorithm</a> <a href="/tags/binarytree/" style="font-size: 10px;">binarytree</a> <a href="/tags/hexo/" style="font-size: 15px;">hexo</a> <a href="/tags/前端/" style="font-size: 20px;">前端</a> <a href="/tags/日记/" style="font-size: 10px;">日记</a>
+						<a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/algorithm/" style="font-size: 10px;">algorithm</a> <a href="/tags/binarytree/" style="font-size: 10px;">binarytree</a> <a href="/tags/hexo/" style="font-size: 15px;">hexo</a> <a href="/tags/python/" style="font-size: 10px;">python</a> <a href="/tags/前端/" style="font-size: 20px;">前端</a> <a href="/tags/日记/" style="font-size: 10px;">日记</a>
 					</div>
 				</section>
 				
@@ -256,6 +256,65 @@
 
 
   
+    <article id="post-单位rem简介" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/07/09/单位rem简介/" class="article-date">
+  	<time datetime="2015-07-09T11:06:29.000Z" itemprop="datePublished">2015-07-09</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/07/09/单位rem简介/">单位rem简介</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>考虑到移动端的分辨率大小不一，我们一般都是用单位rem来适配不同的分辨率，下面来介绍一下rem这个单位<br>而rem是相对于根元素html，这样就意味着，我们只需要在根元素确定一个参考值<br>比如说我们定义了<br>html {font-size: 15px}<br>那么1rem就是15px<br>所以，我们可以根据不同的设备定义不同的根源素font-size，这个时候rem用上去就像是能够自动适配手机一样。</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/blog/">blog</a>
+	</div>
+
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
     <article id="post-模糊效果" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -291,65 +350,6 @@
 <p><code>if(&#39;-webkit-filter&#39; in document.element.style)</code></p>
 <p>来检查是否支持滤镜属性<br>与美工商量后，决定对于不支持这个属性的手机做出如下处理：<br>将图片放大去中间的一部分，然后加上一片黑色的透明度50%的层<br>对于支持模糊效果的手机，考虑到部分图片是白色的，由于字也是白色的，所以在图片上也会加上不透明度为80%的黑色层</p>
 <p>然后在手机上再进行测试，发现在三星的手机上模糊效果非常的卡，非常影响用户的体验，没办法还是改成了都不支持的效果，如果要想使用这个效果，并且获得比较好的用户体验，应该在数据库中存一张模糊的图品，然后前端只需要获取该图片当背静就可以了，减少了渲染的时间。</p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/blog/">blog</a>
-	</div>
-
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-到底部自动加载更多" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/07/09/到底部自动加载更多/" class="article-date">
-  	<time datetime="2015-07-09T11:06:29.000Z" itemprop="datePublished">2015-07-09</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/07/09/到底部自动加载更多/">到底部时自动加载更多</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>判断页面到底了进行判断<br>clientHeight div的显示高度<br>offsetHeight 总高度<br>scrollTop 上边的位置 [0,clientHeight-offsetHeight]<br>1、判断滚动条滚动到最底端： scrollTop == (offsetHeight – clientHeight)<br>2、在滚动条距离底端50px以内： (offsetHeight – clientHeight) – scrollTop &lt;= 50<br>3、在滚动条距离底端5%以内： scrollTop / (offsetHeight – clientHeight) &gt;= 0.95</p>
 
       
     </div>
@@ -504,10 +504,10 @@
 
 
   
-    <article id="post-hexo更换皮肤" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-弹性布局的使用" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2015/07/09/hexo更换皮肤/" class="article-date">
+      <a href="/2015/07/09/弹性布局的使用/" class="article-date">
   	<time datetime="2015-07-09T11:06:29.000Z" itemprop="datePublished">2015-07-09</time>
 </a>
     </div>
@@ -521,7 +521,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2015/07/09/hexo更换皮肤/">Hexo更换皮肤</a>
+      <a class="article-title" href="/2015/07/09/弹性布局的使用/">弹性布局的使用</a>
     </h1>
   
 
@@ -530,12 +530,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>今天晚上很开心，没有加班，早早的就回来了，现在觉得公司的福利真的非常不错啊，早餐+晚餐+水果+按摩==</p>
-<p>开始说正事，今天觉得这个皮肤实在是太丑了，就换了一下皮肤。</p>
-<p>第一步：安装<br>$ git clone <a href="https://github.com/litten/hexo-theme-yilia.git" target="_blank" rel="external">https://github.com/litten/hexo-theme-yilia.git</a> themes/yilia<br>前面是路径，后面是存放的路径</p>
-<p>第二步：配置<br>修改hexo根目录下的 _config.yml ： theme: <em>**</em></p>
-<p>第三步：更新<br>cd themes/yilia<br>git pull</p>
-<p>然后再更新一下就好噜！</p>
+        <p>有时候我们可能需要让某个层自动填充剩余的部分，比如说一行中两个元素我们想分别让他在左边和右边显示，我们就可以分别对他们使用margin-left和margin-right，然后对左边的加上<br>  -webkit-box-flex: 1;<br>就可以了<br>如果有多个元素定义了这个flex，那么就会按照数字的比例分配。</p>
 
       
     </div>
@@ -544,7 +539,7 @@
       
       
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
 	</div>
 
       

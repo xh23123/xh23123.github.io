@@ -114,7 +114,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/algorithm/" style="font-size: 10px;">algorithm</a> <a href="/tags/binarytree/" style="font-size: 10px;">binarytree</a> <a href="/tags/hexo/" style="font-size: 15px;">hexo</a> <a href="/tags/前端/" style="font-size: 20px;">前端</a> <a href="/tags/日记/" style="font-size: 10px;">日记</a>
+						<a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/algorithm/" style="font-size: 10px;">algorithm</a> <a href="/tags/binarytree/" style="font-size: 10px;">binarytree</a> <a href="/tags/hexo/" style="font-size: 15px;">hexo</a> <a href="/tags/python/" style="font-size: 10px;">python</a> <a href="/tags/前端/" style="font-size: 20px;">前端</a> <a href="/tags/日记/" style="font-size: 10px;">日记</a>
 					</div>
 				</section>
 				
@@ -196,11 +196,11 @@
 </nav>
       <div class="body-wrap">
   
-    <article id="post-shine" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-hexo更换皮肤" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2015/07/05/shine/" class="article-date">
-  	<time datetime="2015-07-05T11:06:29.000Z" itemprop="datePublished">2015-07-05</time>
+      <a href="/2015/07/09/hexo更换皮肤/" class="article-date">
+  	<time datetime="2015-07-09T11:06:29.000Z" itemprop="datePublished">2015-07-09</time>
 </a>
     </div>
   
@@ -213,7 +213,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2015/07/05/shine/">Hexo搭建记录</a>
+      <a class="article-title" href="/2015/07/09/hexo更换皮肤/">Hexo更换皮肤</a>
     </h1>
   
 
@@ -222,7 +222,12 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>总算把我的blog搭好了，在这里记录一些学习经验吧！<br>    shinexia.com</p>
+        <p>今天晚上很开心，没有加班，早早的就回来了，现在觉得公司的福利真的非常不错啊，早餐+晚餐+水果+按摩==</p>
+<p>开始说正事，今天觉得这个皮肤实在是太丑了，就换了一下皮肤。</p>
+<p>第一步：安装<br>$ git clone <a href="https://github.com/litten/hexo-theme-yilia.git" target="_blank" rel="external">https://github.com/litten/hexo-theme-yilia.git</a> themes/yilia<br>前面是路径，后面是存放的路径</p>
+<p>第二步：配置<br>修改hexo根目录下的 _config.yml ： theme: <em>**</em></p>
+<p>第三步：更新<br>cd themes/yilia<br>git pull</p>
+<p>然后再更新一下就好噜！</p>
 
       
     </div>
@@ -231,7 +236,126 @@
       
       
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/日记/">日记</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/blog/">blog</a>
+	</div>
+
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
+    <article id="post-后退刷新" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/07/09/后退刷新/" class="article-date">
+  	<time datetime="2015-07-09T11:06:29.000Z" itemprop="datePublished">2015-07-09</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/07/09/后退刷新/">模糊效果时遇到的困难</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>先说一个前话<br>在一个网页中点击后退的时候会发生三种情况<br>1、直接读取缓存中的数据，什么也不做<br>2、将js重新运行，但数据，文件仍然是原来的<br>3、重新发送请求获取数据</p>
+<p>我们自己封装好了一个东西，只要后一页加上CTK.backWithRefresh<br>在退回的时候就会调用refreshPage()函数<br>具体的实现机制我猜测是用一下方法实现的：<br>那么如何判断一个页面是新进入的还是点后退得来的呢，我们只需要定义一个本地的变量，在每次新进入一个本地变量，每次点退回时查看该变量是否存在，来决定是否使用refreshPage函数</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/blog/">blog</a>
+	</div>
+
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
+    <article id="post-到底部自动加载更多" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/07/09/到底部自动加载更多/" class="article-date">
+  	<time datetime="2015-07-09T11:06:29.000Z" itemprop="datePublished">2015-07-09</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/07/09/到底部自动加载更多/">到底部时自动加载更多</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>判断页面到底了进行判断<br>clientHeight div的显示高度<br>offsetHeight 总高度<br>scrollTop 上边的位置 [0,clientHeight-offsetHeight]<br>1、判断滚动条滚动到最底端： scrollTop == (offsetHeight – clientHeight)<br>2、在滚动条距离底端50px以内： (offsetHeight – clientHeight) – scrollTop &lt;= 50<br>3、在滚动条距离底端5%以内： scrollTop / (offsetHeight – clientHeight) &gt;= 0.95</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
 	</div>
 
       
@@ -299,6 +423,65 @@
       
 	<div class="article-tag tagcloud">
 		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/blog/">blog</a>
+	</div>
+
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
+    <article id="post-shine" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/07/05/shine/" class="article-date">
+  	<time datetime="2015-07-05T11:06:29.000Z" itemprop="datePublished">2015-07-05</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/07/05/shine/">Hexo搭建记录</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>总算把我的blog搭好了，在这里记录一些学习经验吧！<br>    shinexia.com</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/日记/">日记</a></li></ul>
 	</div>
 
       

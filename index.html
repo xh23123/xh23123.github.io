@@ -114,7 +114,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/algorithm/" style="font-size: 10px;">algorithm</a> <a href="/tags/binarytree/" style="font-size: 10px;">binarytree</a> <a href="/tags/hexo/" style="font-size: 15px;">hexo</a> <a href="/tags/前端/" style="font-size: 20px;">前端</a> <a href="/tags/日记/" style="font-size: 10px;">日记</a>
+						<a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/algorithm/" style="font-size: 10px;">algorithm</a> <a href="/tags/binarytree/" style="font-size: 10px;">binarytree</a> <a href="/tags/hexo/" style="font-size: 15px;">hexo</a> <a href="/tags/python/" style="font-size: 10px;">python</a> <a href="/tags/前端/" style="font-size: 20px;">前端</a> <a href="/tags/日记/" style="font-size: 10px;">日记</a>
 					</div>
 				</section>
 				
@@ -195,6 +195,175 @@
 	</div>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-Linux系统目录结构" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/08/10/Linux系统目录结构/" class="article-date">
+  	<time datetime="2015-08-10T03:34:13.000Z" itemprop="datePublished">2015-08-10</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/08/10/Linux系统目录结构/">Linux系统目录结构</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>1、bin：常用命令<br>2、boot：启动时的核心文件<br>3、dev：外部设备<br>4、etc：配置文件<br>5、home：用户文件<br>6、lib：链接文件<br>7、/usr：程序文件<br>8、/usr/sbin：管理程序，守护程序<br>9、/usr/bin：用户程序<br>10、/usr/src：内核文件</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
+    <article id="post-Python面向对象基础" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/07/26/Python面向对象基础/" class="article-date">
+  	<time datetime="2015-07-26T11:06:29.000Z" itemprop="datePublished">2015-07-26</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/07/26/Python面向对象基础/">python面向对象基础</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>1、<br>要创建一个类的实例，你可以使用类的名称，并通过<strong>init</strong>方法接受参数。<br>如emp1 = Employee(“Zara”, 2000)</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li></ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/blog/">blog</a>
+	</div>
+
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
+    <article id="post-Linux启动过程" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/07/24/Linux启动过程/" class="article-date">
+  	<time datetime="2015-07-24T11:06:29.000Z" itemprop="datePublished">2015-07-24</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/07/24/Linux启动过程/">Linux 启动过程</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>1、BIOS开机自检，按照BIOS中设置的启动设备（通常是硬盘）来启动<br>2、操作系统接管硬件以后，首先读入 /boot 目录下的内核文件。<br>3、运行init()，init 进程是系统所有进程的起点，init 程序首先是需要读取配置文件 /etc/inittab。<br>4、许多程序需要开机启动。它们在Windows叫做”服务”（service），在Linux就叫做”守护进程”（daemon）。init进程的一大任务，就是去运行这些开机启动的程序。启动时根据运行级别确定运行的程序，运行级别3：完全的多用户状态(有NFS)，登陆后进入控制台命令行模式，运行级别5：X11控制台，登陆后进入图形GUI模式。<br>5、在init的配置文件中有这么一行： si::sysinit:/etc/rc.d/rc.sysinit　它调用执行了/etc/rc.d/rc.sysinit，做系统初始化<br>6、用户登录系统，一般来说，用户的登录方式有三种：（1）命令行登录（2）ssh登录（3）图形界面登录<br>总结：<br>磁盘启动—&gt;操作系统接管—&gt;读入内核文件—&gt;init进程—&gt;守护进程（根据优先级选择）—&gt;系统变量初始化—&gt;用户系统登陆</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">Linux</a></li></ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/blog/">blog</a>
+	</div>
+
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
   
     <article id="post-居中的办法" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -355,184 +524,6 @@
       
 	<div class="article-tag tagcloud">
 		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/algorithm/">algorithm</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/binarytree/">binarytree</a></li></ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/blog/">blog</a>
-	</div>
-
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-单位rem简介" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/07/09/单位rem简介/" class="article-date">
-  	<time datetime="2015-07-09T11:06:29.000Z" itemprop="datePublished">2015-07-09</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/07/09/单位rem简介/">单位rem简介</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>考虑到移动端的分辨率大小不一，我们一般都是用单位rem来适配不同的分辨率，下面来介绍一下rem这个单位<br>而rem是相对于根元素html，这样就意味着，我们只需要在根元素确定一个参考值<br>比如说我们定义了<br>html {font-size: 15px}<br>那么1rem就是15px<br>所以，我们可以根据不同的设备定义不同的根源素font-size，这个时候rem用上去就像是能够自动适配手机一样。</p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/blog/">blog</a>
-	</div>
-
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-弹性布局的使用" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/07/09/弹性布局的使用/" class="article-date">
-  	<time datetime="2015-07-09T11:06:29.000Z" itemprop="datePublished">2015-07-09</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/07/09/弹性布局的使用/">弹性布局的使用</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>有时候我们可能需要让某个层自动填充剩余的部分，比如说一行中两个元素我们想分别让他在左边和右边显示，我们就可以分别对他们使用margin-left和margin-right，然后对左边的加上<br>  -webkit-box-flex: 1;<br>就可以了<br>如果有多个元素定义了这个flex，那么就会按照数字的比例分配。</p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/blog/">blog</a>
-	</div>
-
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-后退刷新" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/07/09/后退刷新/" class="article-date">
-  	<time datetime="2015-07-09T11:06:29.000Z" itemprop="datePublished">2015-07-09</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/07/09/后退刷新/">模糊效果时遇到的困难</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>先说一个前话<br>在一个网页中点击后退的时候会发生三种情况<br>1、直接读取缓存中的数据，什么也不做<br>2、将js重新运行，但数据，文件仍然是原来的<br>3、重新发送请求获取数据</p>
-<p>我们自己封装好了一个东西，只要后一页加上CTK.backWithRefresh<br>在退回的时候就会调用refreshPage()函数<br>具体的实现机制我猜测是用一下方法实现的：<br>那么如何判断一个页面是新进入的还是点后退得来的呢，我们只需要定义一个本地的变量，在每次新进入一个本地变量，每次点退回时查看该变量是否存在，来决定是否使用refreshPage函数</p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
 	</div>
 
       
