@@ -196,10 +196,10 @@
 </nav>
       <div class="body-wrap">
   
-    <article id="post-关于切图" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-可以实现并排的box" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2015/07/09/关于切图/" class="article-date">
+      <a href="/2015/07/09/可以实现并排的box/" class="article-date">
   	<time datetime="2015-07-09T11:06:29.000Z" itemprop="datePublished">2015-07-09</time>
 </a>
     </div>
@@ -213,7 +213,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2015/07/09/关于切图/">关于切图</a>
+      <a class="article-title" href="/2015/07/09/可以实现并排的box/">一行中并排显示</a>
     </h1>
   
 
@@ -222,11 +222,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>一般前端会给两张图，一张是png格式的图，一张是jpg格式的图，png格式就是我们要用的图，jpg格式上面一般会标有每个东西的左上角坐标，以及图形的长和宽</p>
-<p>我们要使用应该有一下2个css类</p>
-<p>源类，就是整张图片，大小应该是整张图片的大小<br>.movie-star-ele {<br>  background: url(‘/res/image/movie/movie_star.png’)no-repeat;<br>  background-size: 9.2rem 15.35rem;<br>}</p>
-<p>该类标出这个图形的坐标，大小<br>.movie-star-five {<br>  background-position: 0 -2.9rem;<br>  width: 6.7rem;<br>  height: 1.2rem;<br>}</p>
-<p>这样就可以显示出想要的图片了</p>
+        <p>下面这个类使子元素水平存在，并且中间是在同一条水平线上的<br>.box {<br>  display: -webkit-box;<br>  -webkit-box-pack: start;<br>  -webkit-box-orient: horizontal;<br>  -webkit-box-align: stretch;<br>}<br>box-pack 属性规定当框大于子元素的尺寸，在何处放置子元素<br>box-orient 属性规定框的子元素应该被水平或垂直排列。</p>
+<p>如果不想让子元素处在同一条水平线上，只需要<br>display: -webkit-box;<br>就可以了</p>
 
       
     </div>
@@ -259,10 +256,10 @@
 
 
   
-    <article id="post-规定行数与察看更多的实现" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-后退刷新" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2015/07/09/规定行数与察看更多的实现/" class="article-date">
+      <a href="/2015/07/09/后退刷新/" class="article-date">
   	<time datetime="2015-07-09T11:06:29.000Z" itemprop="datePublished">2015-07-09</time>
 </a>
     </div>
@@ -276,7 +273,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2015/07/09/规定行数与察看更多的实现/">规定行数与查看更多的实现</a>
+      <a class="article-title" href="/2015/07/09/后退刷新/">模糊效果时遇到的困难</a>
     </h1>
   
 
@@ -285,7 +282,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>要规定几行，就用下面这个类就可以，就是ellipsis表示超过了就是…的表示<br>.three-line {<br>display: -webkit-box;<br>overflow: hidden;<br>text-overflow: ellipsis;<br>-webkit-box-orient: vertical;<br>-webkit-line-clamp: 3;<br>}<br>加上这个类后就可以使他只有规定的行然<br>如果想实现点击查看更多后显示完整的内容，只需要在点击事件中把这个类中去掉即可</p>
+        <p>先说一个前话<br>在一个网页中点击后退的时候会发生三种情况<br>1、直接读取缓存中的数据，什么也不做<br>2、将js重新运行，但数据，文件仍然是原来的<br>3、重新发送请求获取数据</p>
+<p>我们自己封装好了一个东西，只要后一页加上CTK.backWithRefresh<br>在退回的时候就会调用refreshPage()函数<br>具体的实现机制我猜测是用一下方法实现的：<br>那么如何判断一个页面是新进入的还是点后退得来的呢，我们只需要定义一个本地的变量，在每次新进入一个本地变量，每次点退回时查看该变量是否存在，来决定是否使用refreshPage函数</p>
 
       
     </div>
@@ -295,6 +293,65 @@
       
 	<div class="article-tag tagcloud">
 		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/blog/">blog</a>
+	</div>
+
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
+    <article id="post-shine" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/07/05/shine/" class="article-date">
+  	<time datetime="2015-07-05T11:06:29.000Z" itemprop="datePublished">2015-07-05</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/07/05/shine/">Hexo搭建记录</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>总算把我的blog搭好了，在这里记录一些学习经验吧！<br>    shinexia.com</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/日记/">日记</a></li></ul>
 	</div>
 
       
@@ -362,65 +419,6 @@
       
 	<div class="article-tag tagcloud">
 		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/blog/">blog</a>
-	</div>
-
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-shine" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/07/05/shine/" class="article-date">
-  	<time datetime="2015-07-05T11:06:29.000Z" itemprop="datePublished">2015-07-05</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/07/05/shine/">Hexo搭建记录</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>总算把我的blog搭好了，在这里记录一些学习经验吧！<br>    shinexia.com</p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/日记/">日记</a></li></ul>
 	</div>
 
       
